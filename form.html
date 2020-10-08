@@ -16,30 +16,37 @@
 	<div class="col-md-8">
     <div class="card" style="" >
     	<div class="text-center text-danger" style="padding: 20px;"><h3>Create Your Account</h3></div>
-
+         <form action="#" name="registration">
     	<div class="card-body form-group" >
-    		 <div class="form-control text-center"> 
-                <label class="header">Profile Photo:</label>
+    		 <div class="text-center" style="padding-left: 280px;"> 
+                <div style="width: 100px;height:100px;border-radius: 50%; border:1px solid #ee6e73; left: 100px;"></div>
                 
-                <input id="image" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                <input id="image" class="text-center" type="file" name="profile_photo" placeholder="Photo" capture>
             </div>
            <div class=" d-flex justify-content-sm-around">
-    		<div class="col-md-6 field"><input type="text" name="form-1" id="first-name" class="form-control form-rounded" placeholder="First Name" required>
+    		<div class="col-md-6 field"><input type="text" name="firstname" id="first-name" class="form-control form-rounded" placeholder="First Name">
+    			
             
-            <input type="text" name="form-1" id="middle-name" class="form-control form-rounded" placeholder="Middle Name" required>
+            
 
-             <input type="text" name="form-1" id="last-name" class="form-control form-rounded" placeholder="Last Name" required>
+             <input type="text" name="lastname" id="last-name" class="form-control form-rounded" placeholder="Last Name" >
+
+             <input type="email" name="email" id="email" class="form-control form-rounded" placeholder="abc12@gmail.com">
     		</div>
     		<div class="col-md-6 field">
-    			<input type="tel" name="form-1" id="contact" class="form-control form-rounded" placeholder="Mobile Number" required>
+    			<input type="tel" name="contact" id="contact" class="form-control form-rounded" placeholder="Mobile Number">
 
-    			<input type="password" name="form-1" id="password" class="form-control form-rounded" placeholder="Password" required>
+    			<input type="password" name="password" id="password" class="form-control form-rounded" placeholder="Password" >
 
-    			<input type="password" name="form-1" id="confirm-password" class="form-control form-rounded" placeholder="Confirm Password" required>
+    			<input type="password" name="confirmpassword" id="confirm-password" class="form-control form-rounded" placeholder="Confirm Password" >
             </div>
           </div>
-    	  <input type="text" name="form-1" id="description" class="form-control form-rounded" placeholder="Descriptions" style="width: 557px; height: 80px; margin-left: 70px;">
+    	  <input type="text" name="description" id="description" class="form-control form-rounded" placeholder="Descriptions" style="width: 557px; height: 80px; margin-left: 70px;">
+    	  <div class="text-center">
+    	<button type="submit" class="btn btn-primary" style="height: 40px ; width: 100px;">Register</button>
+         </div>
     	</div>
+        </form>
     	
     </div>
     </div>
@@ -48,5 +55,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="dist/jquery.validate.min.js"></script>
+<script src="js/form-validation.js"></script>
 </body>
 </html>
