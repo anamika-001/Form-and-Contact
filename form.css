@@ -3,8 +3,8 @@ form .error {
   color: #ff0000;
 }
 body{
-	background: url("https://wallpapercave.com/wp/wp5098770.jpg");
-	 opacity:0.7;
+	background: url("banner.jpg");
+	 
   background-repeat: no-repeat;
  width:100%;
  height:auto;
@@ -13,12 +13,20 @@ body{
 
 }
 
+
 .field{
 	padding-left: 50px;
 	padding-right: 50px;
 }
 
 .card {
+     background: url("2.jpg");
+       background-repeat: no-repeat;
+       opacity: 0.6;
+
+ height:auto;
+ background-size:cover;
+
        margin-bottom: 50px;
        margin-left: 100px;
        margin-right: 50px;
@@ -28,6 +36,8 @@ body{
        
        border-bottom-left-radius:100px;
        border-top-left-radius:100px;
+        border-bottom-right-radius:100px;
+       border-top-right-radius:100px;
 }
 .col-md-4{
 
@@ -53,4 +63,13 @@ label.header {
 	display: flex;
 	align-items:  center;
 	justify-content: center;
+}
+div img{
+
+
+
+   background-size: cover;
+   width: 100px;
+   height:100px;
+   border-radius: 50%;
 }
