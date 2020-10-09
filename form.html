@@ -6,11 +6,16 @@
 	<link href="form.css" rel="stylesheet"/>
 </head>
 <body>
-	<div class="container-fluid" style="height: fit-content;">
+
+	<div class="container-fluid">
 	      <div class="d-flex justify-content-sm-around">
 		<div class="col-md-4">
 	           <div class="main text-center" style="color: white;"><h1>WelCome</h1>
                  <h5>To keep Connected with Us Please Sign Up with your Personal info</h5>
+                 <a href="contact.html">
+                     
+                     <button class="btn btn-dark">Contact us</button>
+                 </a>
 
 	 </div>
 
@@ -19,11 +24,11 @@
 	</div>
 	<div class="col-md-8">
     <div class="card" style="" >
-    	<div class="text-center text-danger" style="padding: 10px;"><h3>Create Your Account</h3></div>
-         <form action="#" name="registration">
+    	<div class="text-center" style="padding: 10px; color: navy blue;"><h3>Create Your Account</h3></div>
+         <form action="https://formspree.io/f/ganamika063@gmail.com"  method="post" name="registration">
     	<div class="card-body form-group" >
     		    <div class="text-center profile"> 
-                <div style="width: 100px;height:100px;border-radius: 50%; border:1px solid #ee6e73; "></div>
+                <div style="width: 100px;height:100px;border-radius: 50%; border:2px solid blue; "></div>
                 </div>
                 <br>
                 <div class="profile"> 
@@ -40,19 +45,21 @@
     			
             
             <br>
+              <input type="email" name="email" id="email" class="form-control form-rounded" placeholder="abc12@gmail.com" required="">
              
-             <input type="text" name="lastname" id="last-name" class="form-control form-rounded" placeholder="Last Name" >
               <br>
-             <input type="email" name="email" id="email" class="form-control form-rounded" placeholder="abc12@gmail.com">
+            <input type="password" name="password" id="password" class="form-control form-rounded" placeholder="Password" required="" >
                    <br>
              <textarea  type="text" name="description" id="Description" placeholder="Descriptions" class="form-control form-rounded"></textarea>
     		</div>
     		<div class="col-md-6 field">
-    			<input type="tel" name="contact" id="contact" class="form-control form-rounded" placeholder="Mobile Number">
+                <input type="text" name="lastname" id="last-name" class="form-control form-rounded" placeholder="Last Name" required="" >
+                   <br>
+    			<input type="tel" name="contact" id="contact" class="form-control form-rounded" placeholder="Mobile Number" required="">
+                    
+    			
                        <br>
-    			<input type="password" name="password" id="password" class="form-control form-rounded" placeholder="Password" >
-                       <br>
-    			<input type="password" name="confirmpassword" id="confirm-password" class="form-control form-rounded" placeholder="Confirm Password" >
+    			<input type="password" name="confirmpassword" id="confirm-password" class="form-control form-rounded" placeholder="Confirm Password" required="" >
                 <br>
                     <div class="text-center" style="padding: 15px;">
     	  	
