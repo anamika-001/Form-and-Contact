@@ -10,10 +10,7 @@ body{
  height:auto;
  background-size:cover;
 }
-input{
-	margin: 20px;
 
-}
 .field{
 	padding-left: 50px;
 	padding-right: 50px;
@@ -33,7 +30,7 @@ input{
 .col-md-4{
 
 	 display: flex;
-  top: 200px;
+  align-items: center;
   justify-content: flex-end;
 }
 
@@ -48,4 +45,10 @@ label.header {
     text-transform: uppercase;
     display: inline-block;
     font-family: 'Nunito', sans-serif;
+}
+
+.profile{
+	display: flex;
+	align-items:  center;
+	justify-content: center;
 }

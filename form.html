@@ -6,44 +6,62 @@
 	<link href="form.css" rel="stylesheet"/>
 </head>
 <body>
-	<div class="container-fluid">
-	<div class="d-flex justify-content-sm-around">
+	<div class="container-fluid" style="height: fit-content;">
+	      <div class="d-flex justify-content-sm-around">
 		<div class="col-md-4">
-	<div class="main"><h1 style="color: white;">WelCome</h1></div>
+	           <div class="main text-center" style="color: white;"><h1>WelCome</h1>
+                 <h5>To keep Connected with Us Please Sign Up with your Personal info</h5>
+
+	 </div>
+
 	<!-- <button class="btn btn-primary" style="height: 40px ; width: 80px;">Login</button>
 	<button class="btn btn-primary" style="height: 40px; width: 80px;">Sign Up</button> -->
 	</div>
 	<div class="col-md-8">
     <div class="card" style="" >
-    	<div class="text-center text-danger" style="padding: 20px;"><h3>Create Your Account</h3></div>
+    	<div class="text-center text-danger" style="padding: 10px;"><h3>Create Your Account</h3></div>
          <form action="#" name="registration">
     	<div class="card-body form-group" >
-    		 <div class="text-center" style="padding-left: 280px;"> 
-                <div style="width: 100px;height:100px;border-radius: 50%; border:1px solid #ee6e73; left: 100px;"></div>
-                
-                <input id="image" class="text-center" type="file" name="profile_photo" placeholder="Photo" capture>
-            </div>
+    		    <div class="text-center profile"> 
+                <div style="width: 100px;height:100px;border-radius: 50%; border:1px solid #ee6e73; "></div>
+                </div>
+                <br>
+                <div class="profile"> 
+                <input id="image" class="text-center" type="file" name="profile_photo" placeholder="Photo" capture style="padding-left: 200px;">
+               </div>
+                  <br> 
+ 
+
            <div class=" d-flex justify-content-sm-around">
-    		<div class="col-md-6 field"><input type="text" name="firstname" id="first-name" class="form-control form-rounded" placeholder="First Name">
+
+    		<div class="col-md-6 field">
+                     
+    			<input type="text" name="firstname" id="first-name" class="form-control form-rounded" placeholder="First Name">
     			
             
-            
-
+            <br>
+             
              <input type="text" name="lastname" id="last-name" class="form-control form-rounded" placeholder="Last Name" >
-
+              <br>
              <input type="email" name="email" id="email" class="form-control form-rounded" placeholder="abc12@gmail.com">
+                   <br>
+             <textarea  type="text" name="description" id="Description" placeholder="Descriptions" class="form-control form-rounded"></textarea>
     		</div>
     		<div class="col-md-6 field">
     			<input type="tel" name="contact" id="contact" class="form-control form-rounded" placeholder="Mobile Number">
-
+                       <br>
     			<input type="password" name="password" id="password" class="form-control form-rounded" placeholder="Password" >
-
+                       <br>
     			<input type="password" name="confirmpassword" id="confirm-password" class="form-control form-rounded" placeholder="Confirm Password" >
+                <br>
+                    <div class="text-center" style="padding: 15px;">
+    	  	
+    	    <button type="submit" class="btn btn-primary" style="height: 40px ; width: 100px; ">Register</button>
+
             </div>
           </div>
-    	  <input type="text" name="description" id="description" class="form-control form-rounded" placeholder="Descriptions" style="width: 557px; height: 80px; margin-left: 70px;">
-    	  <div class="text-center">
-    	<button type="submit" class="btn btn-primary" style="height: 40px ; width: 100px;">Register</button>
+    	  
+    	 
          </div>
     	</div>
         </form>
