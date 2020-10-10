@@ -3,9 +3,11 @@ $(document).ready(function() {
    $.validator.addMethod("EMAIL", function(value, element) {
                 return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
             }, "Email Address is invalid: Please enter valid email address.");
- $.validator.addMethod("PASSWORD",function(value,element){
+   $.validator.addMethod("PASSWORD",function(value,element){
                 return this.optional(element) || /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/i.test(value);
             },"Passwords are 8-16 characters with uppercase letters, lowercase letters and at least one number.");
+
+  
   $("form[name='registration']").validate({
     
     rules: {
@@ -22,7 +24,6 @@ $(document).ready(function() {
 
       email:"required EMAIL",
      
- 
       contact: {
         required: true,
         number:true,
@@ -64,19 +65,21 @@ $(document).ready(function() {
        
         equalTo:"password and confirm password must be same"
       },
+
      
     },
 
 
-
+   
     
     submitHandler: function(form) {
-      form.submit();
-      //on keyup 
-      //json ajax advance jquery core php core mysql-2 week 
+      form.submit(alert("succesfully submitted"));
+
+      
       }
   });
 
- 
+
+
 });
 
