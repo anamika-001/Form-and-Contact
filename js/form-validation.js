@@ -1,58 +1,82 @@
 
 $(document).ready(function() {
- 
+   $.validator.addMethod("EMAIL", function(value, element) {
+                return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
+            }, "Email Address is invalid: Please enter valid email address.");
+ $.validator.addMethod("PASSWORD",function(value,element){
+                return this.optional(element) || /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/i.test(value);
+            },"Passwords are 8-16 characters with uppercase letters, lowercase letters and at least one number.");
   $("form[name='registration']").validate({
     
     rules: {
-     //min-2
-      firstname: "required",
-      lastname: "required",
+
+      firstname: {
+        required:true,
+        minlength:2
+      },
+
+      lastname: {
+        required:true,
+        minlength:2
+      },
+
+      email:"required EMAIL",
+     
+ 
+      contact: {
+        required: true,
+        number:true,
+        
+        minlength: 10,
+        maxlength:10
+      },
       
-      email: {
-        required: true,
-        // regex
-        email: true
-      },
-      //numeric and fixed-10 digit and lebel in design just above input 
-      // in image select only jpg png and jpeg image format
-      contact:"required",
-      //password sholud be same
-      password: {
-        required: true,
-        minlength: 5
-      },
+      password: "required PASSWORD",
       confirmpassword: {
         required: true,
-        minlength: 5
+       
+        equalTo:"#password"
       }
     },
     
     messages: {
-      firstname: "Please enter your firstname",
-      lastname: "Please enter your lastname",
-      contact: "Please enter your contact",
+      firstname:{ 
+        required:"Please enter your firstname",
+        minlength:"firstname is incomplete"
+    },
+      lastname:{ 
+        required:"Please enter your lastname",
+        minlength:"lastename is incomplete"
+    },
+      contact: {
+        required:"Please enter your contact",
+        number:"contact must be in digits",
+        minlength:"contact is less than 10 digit",
+        maxlength:"contact exceeded 10 digit"
+      },
 
       password: {
         required: "Please provide a password",
-        minlength: "Your password must be at least 5 characters long"
+       
       },
       confirmpassword: {
         required: "Please provide a password",
-        minlength: "Your password must be at least 5 characters long"
+       
+        equalTo:"password and confirm password must be same"
       },
-      email: "Please enter a valid email address"
+     
     },
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
+
+
+
+    
     submitHandler: function(form) {
       form.submit();
       //on keyup 
       //json ajax advance jquery core php core mysql-2 week 
-
-    }
+      }
   });
 
-
-
+ 
 });
 
