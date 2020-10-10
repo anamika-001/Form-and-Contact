@@ -1,28 +1,40 @@
 $(document).ready(function() {
+  $.validator.addMethod("EMAIL", function(value, element) {
+                return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
+            }, "Email Address is invalid: Please enter valid email address.");
  
   $("form[name='contact']").validate({
     
     rules: {
     
-      firstname: "required",
+      fullname: {
+        required:true,
+        minlength:2
+      },
   
 
-      email: {
-        required: true,
+      email:"required EMAIL",
         
-        email: true
-      },
-      message:"required"
+
+      message:{
+        required:true,
+        minlength:20
+      }
     },
     
     messages: {
-      firstname:"Please enter your firstname",
-      
+      fullname:{
+        required:"Please enter your name",
+        minlength:"name is incomplete"
+        },
      
        
       email: "Please enter a valid email address",
-      message: "Please add your query"
+       message: {
+        required:"Please add your query",
+        minlength:"elaborate little more"
     },
+  },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
